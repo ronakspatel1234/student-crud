@@ -1,0 +1,38 @@
+<div>
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" id="msform" >
+
+
+        <fieldset>
+
+            <h2 class="fs-title">Edit Student</h2>
+            <div>
+
+                <input type="number" placeholder="Enter Id" formControlName="id" >
+            </div>
+            <div>
+
+                <input type="text" placeholder="Enter Name" formControlName="name" >
+            </div>
+
+
+            <div>
+
+                <input type="text" placeholder="Enter Email" formControlName="email" >
+            </div>
+            <div>
+
+                <input type="text" placeholder="Enter Subject" formControlName="subject" >
+            </div>
+            <div>
+
+                <input type="text" placeholder="Enter DateOfBirth" formControlName="dateOfBirth" >
+            </div>
+
+            <input type="submit" [disabled]="!profileForm.valid" class="btn btn-success" />
+
+
+        </fieldset>
+    </form>
+
+
+</div>
